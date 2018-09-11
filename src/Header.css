@@ -1,0 +1,42 @@
+
+:root{
+    --var-main-black : #333;
+    --var-main-white : #eee;
+    --var-main-brown : #FFDEAD;
+}
+/*common*/
+#styleHomeButton, #styleMenu, #styleMenuLast{
+    cursor: pointer;
+}
+#styleHomeButton:hover, #styleMenu:hover, #styleMenuLast:hover {
+    color : var(--var-main-brown);
+}
+
+/*each*/
+#styleHomeButton {
+    position : absolute;
+    top : 0;
+    left : 0;
+    margin : 15px;
+}
+#styleHeader {
+    background-color : var(--var-main-black);
+    padding : 16px;
+    color : var(--var-main-white);
+    font-size : 14px;
+    font-weight : bold;
+    text-align : center;
+    height : 24px;
+}
+#styleMenu {
+    margin : 14px 7px 14px 7px;
+    padding-left : 10px;
+    border-left : 1px solid var(--var-main-white);
+}
+#styleMenuLast {
+    margin : 14px 7px 14px 7px;
+    padding-left : 10px;
+    padding-right: 10px;
+    border-left : 1px solid var(--var-main-white);
+    border-right : 1px solid var(--var-main-white);
+}

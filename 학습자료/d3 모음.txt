@@ -1,0 +1,28 @@
+https://github.com/d3/d3/wiki/Gallery
+
+트리구조
+https://bl.ocks.org/mbostock/4339083
+참고 : https://datalab.usaspending.gov/federal-account-explorer.html
+
+시간대별 분포 막대
+https://bl.ocks.org/mbostock/6fead6d1378d6df5ae77bb6a719afcb2
+
+분포도를 줌인 줌아웃
+https://bl.ocks.org/mbostock/f48fcdb929a620ed97877e4678ab15e6
+
+그래프를 그리고 확대 출소
+https://bl.ocks.org/mbostock/34f08d5e11952a80609169b7917d4172
+
+드래그해서 원들을 마음대로 놓기
+https://bl.ocks.org/mbostock/444757cc9f0fde320a5f469cd36860f4
+
+텍스트 0에서 54504 까지 빠르게 올리기
+https://bl.ocks.org/mbostock/7004f92cac972edef365
+
+CVS데이터들 그래프, 분포도로 표현
+https://bl.ocks.org/mbostock/d8bcc4b130df420d6c40
+https://archive.nytimes.com/www.nytimes.com/interactive/2012/05/17/business/dealbook/how-the-facebook-offering-compares.html
+
+집합별 표현 및 확대
+https://bl.ocks.org/mbostock/7607535
+

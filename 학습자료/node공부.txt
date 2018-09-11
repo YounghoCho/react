@@ -1,0 +1,37 @@
+공부주소
+https://velopert.com/node-js-tutorials
+
+[Node.JS]
+노드JS는 JS의 런타임이다.
+이벤트 기반, 비동기 I/O 방식으로 작동한다.
+노드JS가 빠른 이유? Single 쓰레드와 Event Loop기반으로 비동기 동작을 하기 때뭉네, 쓰레드가 IO응답을 기다릴 필요가 없어서 connection이 많거나 cpu부하율이 큰경우에 타 서버 런타임보다 처리가 빠르다.
+
+[NPM, YARN, NVM]
+로컬설치 : 기본적으로 로컬 설치를 하고 현 패키지의 node_modules에 모듈이 설치된다.
+글로벌설치 : 시스템 디렉토리 /usr/lib에 설치되며 sudo권한이 있어야하고 'npm link 모듈이름'으로 불러와야 사용 가능하다.
+YARN은 npm의 개선 버전으로, 더 나은 속도와 캐싱 시스템을 제공한다.
+NVM은 Node의 다양한 버전을 설치할 수 있게 해준다. 새 버전이 나왔을때 업데이트 할 수 있다.
+
+[Callback function]
+콜백함수란, 매개변수로서 전달된 함수를 이야기한다.
+JS에서는 함수 자체가 '객체'이다.
+Node에서는 비동기 함수를 쓸때, 첫번째 매개변수는 error 두번째로는 결과값 data가 온다.
+
+[Event-Driven]
+이벤트 위주로 어플리케이션을 구성할 수 있는데, 콜백함수와는 다르다.
+콜백함수는 비동기 함수가 결과를 반환할때 호출되지만, 이벤트는 옵저버 패턴에 의해 동작한다.
+//Node의 이벤트 구조
+EventEmitter -> Event -> EventHandler
+                      ↑
+               Event Loop
+Node는 EventEmitter 클래스와(이벤트 발생, 이벤트와 핸들러 함수를 Binding), events 모듈을 가지고있다
+EventLoop는 이벤트를 대기하는 메인 루프로 옵저버 역할을 하며, 특정 이벤트가 발생하는 것을 감지한다.
+이벤트가 발생하면 EventHandler가 EventLoop에 의해 시작하게 된다.
+//과정
+var events = require('events');		//모듈 import
+var eventEmitter = new events.EventEmitter();	//EventEmitter 객체생성
+var connectHandler = function connected(){}	//핸들러 함수 생성
+eventEmitter.on('connection', connectHandler);	//임의 이벤트명과 핸들러 연동
+eventEmitter.emit('connection');		//이벤트 발생
+
+

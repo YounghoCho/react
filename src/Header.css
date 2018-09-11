@@ -5,10 +5,10 @@
     --var-main-brown : #FFDEAD;
 }
 /*common*/
-#styleHomeButton, #styleMenu, #styleMenuLast{
+#styleHomeButton, #styleMenu1, #styleMenu2, #styleMenuLast{
     cursor: pointer;
 }
-#styleHomeButton:hover, #styleMenu:hover, #styleMenuLast:hover {
+#styleHomeButton:hover, #styleMenu1:hover, #styleMenu2:hover, #styleMenuLast:hover {
     color : var(--var-main-brown);
 }
 
@@ -28,7 +28,7 @@
     text-align : center;
     height : 24px;
 }
-#styleMenu {
+#styleMenu1, #styleMenu2{
     margin : 14px 7px 14px 7px;
     padding-left : 10px;
     border-left : 1px solid var(--var-main-white);

@@ -1,3 +1,22 @@
+1. 고객의 데이터 분야 수준을 파악한다
+2. 고객이 필요한 데이터를 정의한다.
+3. 고객이 필요한 시각화를 선정한다.
+ Line : x축에 따른 변화를 나타낼때 
+ Bar : 비교 항목이 많을 때
+ Scatter : 소수 항목들의 분산을 비교할때
+ Pie : 전체에서 차지하는 부분을 보일때 
+4. 색은 대조적으로, 글꼴은 16px serif로, 적절한 label들을 달아주는 것이 가독성에 좋다.
+5. y축이 없으면 높낮이 차이가 과장될 수 있다.
+6. 목표는 데이터를 쉽게 이해하게하여 데이터를 강화시키는 것이지 디자인이 주체가 아니다.
+
+데이터 시각화란
+https://uxplanet.org/data-visualization-best-practices-and-foundations-48f4a08d354e
+
+D3를 React에 적용하기
+https://medium.com/@Elijah_Meeks/interactive-applications-with-react-d3-f76f7b3ebc71
+
+D3 소스코드
+https://bl.ocks.org/mbostock0
 https://github.com/d3/d3/wiki/Gallery
 
 트리구조

@@ -37,7 +37,7 @@ class App extends Component {
       alert("error at handleMainPage()");
     }
   }
-
+  
   render() {
     return (
       //클래스 컴포넌트 사용

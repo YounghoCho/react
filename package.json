@@ -3,8 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "billboard.js": "^1.6.2",
     "d3": "^5.7.0",
     "react": "^16.5.0",
+    "react-billboard.js": "^0.1.2",
     "react-dom": "^16.5.0",
     "react-scripts": "1.1.5"
   },

@@ -141,6 +141,24 @@ css 클래스명 동적으로 바꾸기 : <div className={'test ${checked ? ' checked' : ''
 e.stopPropagation() : 번식을 멈춘다는 뜻으로, div안의 div에서 onclick할때 부모 div의 onclick이 되지 작동되지 않게 한다.
 arr.findIndex(function(){}) : 함수안의 조건을 만족하는 arr의 첫 번째 인덱스를 반환한다.
 
+[리덕스]
+컴포넌트들의 state를 부모를 거치지 않고, 외부에서 한다. 
+유지보수에 효율이 오른다. depth 10의 컴포넌트의 업데이트가 생기면 부모,부모,부모 ... Root를 거쳐야 한다. 리덕스를 쓰면 1 depth만으로도 업데이트가 가능하다.
+#원칙 : 1 app 1 store, 읽기전용(기존의 state건들지 않고 새로운 state를 생성해서 업데이트), 리듀서는 순수함수(같은 입력에 같은 결과를 반환한다 - random X, new date X)
+
+#원리 : Redux Store생성-> A컴포넌트가 Store를 구독(subscribe())-> B컴포넌트에서 업데이트 발생(dispatch())-> action을 Store의 '리듀서'에 넘김(리듀서는 업데이트 로직을 수행하는 함수)-> 업데이트를 구독자에게 알림(listener())-> 다시 랜더링 됨
+#1. 스토어생성
+     const {createStore} = Redux;
+     const store = createStore(액션을 넘겨받는 함수 A);
+#2. 스토어 구독
+     store.subscribe(render);
+#3. 업데이트
+     element.addEventListener(... store.dispatch(up)); //up액션이 A로 간다.
+     //A내부에서 로직 수행 후 return state;
+#4. const render = () => { //여기가 listener로써 업데이트가 완료되면 재 랜더링 되는 부분}
+
+
+
 
 
 

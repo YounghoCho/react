@@ -1,121 +1,129 @@
 ***React***
 https://velopert.com/3626
 
-[React¶õ]
-Áö¼ÓÇØ¼­ µ¥ÀÌÅÍ°¡ º¯È­ÇÏ´Â ´ë±Ô¸ð ¾ÖÇÃ¸®ÄÉÀÌ¼ÇÀ» ±¸ÃàÇÏ±â À§ÇÏ¿© ¸¸µé¾îÁ³´Ù
-Virtual DOMÀ» »ç¿ëÇØ ÇÊ¿äÇÑ °÷¿¡¸¸ ¾÷µ¥ÀÌÆ®¸¦ ÇÑ´Ù. 
- ½ÇÁ¦ ºê¶ó¿ì´õÀÇ DOMÀ» ´Ù½Ã ·»´õ¸µ ÇÏ´Â°Ô ¾Æ´Ï¶ó, JS·Î ÀÌ·ïÁø °¡»ó DOM¿¡ ÇÑ¹ø ·»´õ¸µÀ» ÇÏ°í, ½ÇÁ¦ DOM°ú ºñ±³ÇÑ´ÙÀ½ º¯È­°¡ ÇÊ¿äÇÑ °÷¸¸ ¾÷µ¥ÀÌÆ®ÇÑ´Ù.
-JSÄÚµå´Â {} ¾È¿¡´Ù°¡ »ç¿ëÇÑ´Ù.
- ¿¹¸¦µé¾î, ÁÖ¼®Àº {/*...*/} È¤Àº <div //ÅÂ±×»çÀÌ¿¡ ¾µ¼öÀÖ´Ù.>
+[Reactëž€]
+ì§€ì†í•´ì„œ ë°ì´í„°ê°€ ë³€í™”í•˜ëŠ” ëŒ€ê·œëª¨ ì• í”Œë¦¬ì¼€ì´ì…˜ì„ êµ¬ì¶•í•˜ê¸° ìœ„í•˜ì—¬ ë§Œë“¤ì–´ì¡Œë‹¤
+Virtual DOMì„ ì‚¬ìš©í•´ í•„ìš”í•œ ê³³ì—ë§Œ ì—…ë°ì´íŠ¸ë¥¼ í•œë‹¤. 
+ ì‹¤ì œ ë¸Œë¼ìš°ë”ì˜ DOMì„ ë‹¤ì‹œ ë Œë”ë§ í•˜ëŠ”ê²Œ ì•„ë‹ˆë¼, JSë¡œ ì´ë¤„ì§„ ê°€ìƒ DOMì— í•œë²ˆ ë Œë”ë§ì„ í•˜ê³ , ì‹¤ì œ DOMê³¼ ë¹„êµí•œë‹¤ìŒ ë³€í™”ê°€ í•„ìš”í•œ ê³³ë§Œ ì—…ë°ì´íŠ¸í•œë‹¤.
+JSì½”ë“œëŠ” {} ì•ˆì—ë‹¤ê°€ ì‚¬ìš©í•œë‹¤.
+ ì˜ˆë¥¼ë“¤ì–´, ì£¼ì„ì€ {/*...*/} í˜¹ì€ <div //íƒœê·¸ì‚¬ì´ì— ì“¸ìˆ˜ìžˆë‹¤.>
 
-[À¥ÆÑ vs ¹Ùº§]
-À¥ÆÑÀº, ¿©·¯ JavaScript ¼Ò½º¸¦ ÇÏ³ª·Î ¹­´Â µµ±¸
-¹Ùº§Àº, ES6/ES7 ÄÚµå¸¦ ECMAScript5 ÄÚµå·Î transpiling ÇÏ±â À§ÇÑ µµ±¸
+[ì›¹íŒ© vs ë°”ë²¨]
+ì›¹íŒ©ì€, ì—¬ëŸ¬ JavaScript ì†ŒìŠ¤ë¥¼ í•˜ë‚˜ë¡œ ë¬¶ëŠ” ë„êµ¬
+ë°”ë²¨ì€, ES6/ES7 ì½”ë“œë¥¼ ECMAScript5 ì½”ë“œë¡œ transpiling í•˜ê¸° ìœ„í•œ ë„êµ¬
 
-[ÇÃ·°½º vs ¸®´ö½º]
-MVC´Â ¸ðµ¨°ú ºä°¡ »óÈ£°£¿¡ µ¥ÀÌÅÍ º¯È­¸¦ ÀÏÀ¸Å³ ¼ö ÀÖ´Ù´Â ÇÑ°è°¡ ÀÖ´Ù.
-±×·¡¼­ FB¿¡¼­ ¸¸µç µðÀÚÀÎÆÐÅÏÀÌ Flux´Ù.
-±¸¼ºÀº ³×°¡Áö Action, Dispatcher, Model, View(¿©±â¼± ÄÁÆ®·Ñ·¯¿ªÇÒ)ÀÌ¸ç, ´Ü¹æÇâÀÌ¹Ç·Î MVCº¸´Ù °ü¸®°¡ ½±´Ù
-¸®´ö½º´Â Flux¸¦ ´õ °£´ÜÇÏ°Ô »ç¿ëÇÒ¼öÀÖ´Â ±¸ÇöÃ¼ÀÌ´Ù.
+[í”ŒëŸ­ìŠ¤ vs ë¦¬ë•ìŠ¤]
+MVCëŠ” ëª¨ë¸ê³¼ ë·°ê°€ ìƒí˜¸ê°„ì— ë°ì´í„° ë³€í™”ë¥¼ ì¼ìœ¼í‚¬ ìˆ˜ ìžˆë‹¤ëŠ” í•œê³„ê°€ ìžˆë‹¤.
+ê·¸ëž˜ì„œ FBì—ì„œ ë§Œë“  ë””ìžì¸íŒ¨í„´ì´ Fluxë‹¤.
+êµ¬ì„±ì€ ë„¤ê°€ì§€ Action, Dispatcher, Model, View(ì—¬ê¸°ì„  ì»¨íŠ¸ë¡¤ëŸ¬ì—­í• )ì´ë©°, ë‹¨ë°©í–¥ì´ë¯€ë¡œ MVCë³´ë‹¤ ê´€ë¦¬ê°€ ì‰½ë‹¤
+ë¦¬ë•ìŠ¤ëŠ” Fluxë¥¼ ë” ê°„ë‹¨í•˜ê²Œ ì‚¬ìš©í• ìˆ˜ìžˆëŠ” êµ¬í˜„ì²´ì´ë‹¤.
+
+[ë¦¬ë•ìŠ¤ ì›ë¦¬]
+1. onCreate, onChange, onSubmit ë“±ì˜ ì‚¬ìš©ìž ì•¡ì…˜ì´ ë°œìƒí•œë‹¤
+2.ì•¡ì…˜í•¨ìˆ˜ë‚´ ì•¡ì…˜ê°ì²´ë¥¼ dispatch()ë¡œ 'ìŠ¤í† ì–´'ì— ë³´ë‚¸ë‹¤.
+3.ìŠ¤í† ì–´ëŠ” ë¦¬ë“€ì„œë¡œ ë§Œë“¤ì–´ì§€ê¸°ë•Œë¬¸ì— ë¦¬ë“€ì„œë¡œ ê°€ë³´ë©´, ì•¡ì…˜ê°ì²´ í˜¹ì€ ë³€í•œstateê°€ ë¦¬ë“€ì„œë¡œ ì „í•´ì§„ë‹¤.
+4.ë¦¬ë“€ì„œì—ì„œëŠ” ì‚´ì œë¡œ ì•¡ì…˜ ê°ì²´ë¥¼ ë³€í™”ì‹œí‚¤ê³  ë‹¤ì‹œ 'ìŠ¤í† ì–´'ë¡œ ë¦¬í„´í•œë‹¤ 
+5.subscriberëŠ” ìŠ¤í† ì–´ë¥¼ êµ¬ë…í•˜ê¸°ë•Œë¬¸ì— stateë‚˜ actionì´ ë³€í•œê²ƒì„ ì•Œê³  ë‹¤ì‹œrenderí•œë‹¤.
+6.ë‹¤ë§Œ reactJSì—ì„œëŠ” store.subscriber()ë¥¼ ì“°ì§€ì•ŠìŠµë‹ˆë‹¤. (ë‚´reactëŠ” setStateë¡œ ë³€í•œê²ƒì„ì•Œë ¤ì¤€ë‹¤)
 
 [JSX]
-Javascript XML·Î, ¸®¾×Æ®¿¡¼­ UI ÅÛÇÃ¸´À» ¸¸µé¶§ »ç¿ëÇÑ´Ù.
-0. ÅÂ±×´Ý±â : ´ÜÀÏ ÅÂ±×(<input><br>)µµ ¹«Á¶°Ç ´Ý¾ÆÁà¾ß ¿¡·¯°¡ ¾ø´Ù. <button/><br/> 
-1. º¹ÇÕÅÂ±× : ¿©·¯ Element¸¦ ·»´õ¸µ ÇÒ¶§´Â ¹«Á¶°Ç ÇÏ³ªÀÇ ¿¤¸®¸ÕÆ®·Î °¨½ÎÁ®ÀÖ¾î¾ß ÇÑ´Ù. ´Ü div·Î °¨½Î´Â°Ô È¥¶õ½º·¯¿ì¸é <Fragment></Fragment>¸¦ »ç¿ëÇÑ´Ù.
-2. JS»ç¿ë : JSX¿¡¼­ JS»ç¿ëÇÒ¶§´Â ÅÂ±×»çÀÌ¿¡ { }¸¸ ³Ö¾îÁÖ¸é µÈ´Ù. let value = 1; <h1>{value}</h1>
-3. ¸Þ¼Òµå : say(){ } render(){ return ( <button onClick={this.say}>);}. ¿©±â¼­´Â JS¿Í ´Ù¸£°Ô say()°¡ ¾Æ´Ï´Ù. say()¶ó°íÇÏ¸é ÆäÀÌÁö ·Îµù½Ã¿¡µµ µ¿ÀÛÇÏ°ÔµÈ´Ù.  
-4. IF-else : »ç¿ë ºÒ°¡. »ïÇ× ¿¬»êÀÚ { ? : : }, &&¿¬»êÀÚ ¸¦ ´ë¾ÈÀ¸·Î »ç¿ëÇØ¾ßÇÔ. (if else´Â »ïÇ×¿¬»êÀÚ·Î, if¹®Àº &&¿¬»êÀÚ·Î ¾´´Ù). ±»ÀÌ if/else/switch¸¦ ¾²ÀÚ¸é IIFE¸¦ »ç¿ëÇÏ¸é µÈ´Ù.
-5. ½ºÅ¸ÀÏ : °´Ã¼ÇüÅÂ·Î Àû¿ëÇÑ´Ù. let style={backgroundColor:'red'}; <p style = {style}></p>
-6. ÄÁº¥¼Ç : Ä«¸á(³«Å¸) Ç¥±â¹ý »ç¿ë. Å¬·¡½º´Â ´ë¹®ÀÚ·Î½ÃÀÛ, ³ª¸ÓÁö´Â ¼Ò¹®ÀÚ·Î ½ÃÀÛ, º¹ÇÕ¾î´Â ¿¬°áºÎºÐ¿¡¼­ ´ë¹®ÀÚ·Î, ¸Þ¼Òµå´Â ¼Ò¹®ÀÚ·Î
+Javascript XMLë¡œ, ë¦¬ì•¡íŠ¸ì—ì„œ UI í…œí”Œë¦¿ì„ ë§Œë“¤ë•Œ ì‚¬ìš©í•œë‹¤.
+0. íƒœê·¸ë‹«ê¸° : ë‹¨ì¼ íƒœê·¸(<input><br>)ë„ ë¬´ì¡°ê±´ ë‹«ì•„ì¤˜ì•¼ ì—ëŸ¬ê°€ ì—†ë‹¤. <button/><br/> 
+1. ë³µí•©íƒœê·¸ : ì—¬ëŸ¬ Elementë¥¼ ë Œë”ë§ í• ë•ŒëŠ” ë¬´ì¡°ê±´ í•˜ë‚˜ì˜ ì—˜ë¦¬ë¨¼íŠ¸ë¡œ ê°ì‹¸ì ¸ìžˆì–´ì•¼ í•œë‹¤. ë‹¨ divë¡œ ê°ì‹¸ëŠ”ê²Œ í˜¼ëž€ìŠ¤ëŸ¬ìš°ë©´ <Fragment></Fragment>ë¥¼ ì‚¬ìš©í•œë‹¤.
+2. JSì‚¬ìš© : JSXì—ì„œ JSì‚¬ìš©í• ë•ŒëŠ” íƒœê·¸ì‚¬ì´ì— { }ë§Œ ë„£ì–´ì£¼ë©´ ëœë‹¤. let value = 1; <h1>{value}</h1>
+3. ë©”ì†Œë“œ : say(){ } render(){ return ( <button onClick={this.say}>);}. ì—¬ê¸°ì„œëŠ” JSì™€ ë‹¤ë¥´ê²Œ say()ê°€ ì•„ë‹ˆë‹¤. say()ë¼ê³ í•˜ë©´ íŽ˜ì´ì§€ ë¡œë”©ì‹œì—ë„ ë™ìž‘í•˜ê²Œëœë‹¤.  
+4. IF-else : ì‚¬ìš© ë¶ˆê°€. ì‚¼í•­ ì—°ì‚°ìž { ? : : }, &&ì—°ì‚°ìž ë¥¼ ëŒ€ì•ˆìœ¼ë¡œ ì‚¬ìš©í•´ì•¼í•¨. (if elseëŠ” ì‚¼í•­ì—°ì‚°ìžë¡œ, ifë¬¸ì€ &&ì—°ì‚°ìžë¡œ ì“´ë‹¤). êµ³ì´ if/else/switchë¥¼ ì“°ìžë©´ IIFEë¥¼ ì‚¬ìš©í•˜ë©´ ëœë‹¤.
+5. ìŠ¤íƒ€ì¼ : ê°ì²´í˜•íƒœë¡œ ì ìš©í•œë‹¤. let style={backgroundColor:'red'}; <p style = {style}></p>
+6. ì»¨ë²¤ì…˜ : ì¹´ë©œ(ë‚™íƒ€) í‘œê¸°ë²• ì‚¬ìš©. í´ëž˜ìŠ¤ëŠ” ëŒ€ë¬¸ìžë¡œì‹œìž‘, ë‚˜ë¨¸ì§€ëŠ” ì†Œë¬¸ìžë¡œ ì‹œìž‘, ë³µí•©ì–´ëŠ” ì—°ê²°ë¶€ë¶„ì—ì„œ ëŒ€ë¬¸ìžë¡œ, ë©”ì†Œë“œëŠ” ì†Œë¬¸ìžë¡œ
 
-[JSX Á¶°Ç¹®]
+[JSX ì¡°ê±´ë¬¸]
 1. if -> {1 + 1 === 2 && (<div>yes</div>)}
 2. if else -> { a==b ? A : B }
 3. IIFE => { (function(){ if (a==1) return (<div></div>)})() } 
-   ¸¶Áö¸·¿¡()°¡ ºÙ´Â°Í±îÁö°¡ IIFEÀÇ Çü½ÄÀÌ¸ç ÀÌ°÷¿¡ ¸Å°³º¯¼ö¸¦ ³Ö¾î ÀÍ¸íÇÔ¼ö¿¡ Àü´ÞÇÒ ¼ö ÀÖ´Ù.
+   ë§ˆì§€ë§‰ì—()ê°€ ë¶™ëŠ”ê²ƒê¹Œì§€ê°€ IIFEì˜ í˜•ì‹ì´ë©° ì´ê³³ì— ë§¤ê°œë³€ìˆ˜ë¥¼ ë„£ì–´ ìµëª…í•¨ìˆ˜ì— ì „ë‹¬í•  ìˆ˜ ìžˆë‹¤.
 
-[ÄÄÆ÷³ÍÆ®]
-ÄÄÆ÷³ÍÆ®´Â props¿Í state·Î ±¸¼ºµÇ´Âµ¥, props´Â ºÎ¸ð ÀÚ½Ä °£ ÁÖ°í¹Þ´Â °ªÀÌ¸ç, state´Â ÄÄÆ÷³ÍÆ® ³»¿¡¼­ »ç¿ëµÈ´Ù.
-ÄÄÆ÷³ÍÆ®¸¦ ¸¸µé¸é, ´Ù¸¥°÷¿¡¼­ importÇÏ°í ÄÄÆ÷³ÍÆ® ÀÌ¸§À» ÅÂ±×Ã³·³ »ç¿ëÇÒ ¼ö ÀÖ´Ù.
+[ì»´í¬ë„ŒíŠ¸]
+ì»´í¬ë„ŒíŠ¸ëŠ” propsì™€ stateë¡œ êµ¬ì„±ë˜ëŠ”ë°, propsëŠ” ë¶€ëª¨ ìžì‹ ê°„ ì£¼ê³ ë°›ëŠ” ê°’ì´ë©°, stateëŠ” ì»´í¬ë„ŒíŠ¸ ë‚´ì—ì„œ ì‚¬ìš©ëœë‹¤.
+ì»´í¬ë„ŒíŠ¸ë¥¼ ë§Œë“¤ë©´, ë‹¤ë¥¸ê³³ì—ì„œ importí•˜ê³  ì»´í¬ë„ŒíŠ¸ ì´ë¦„ì„ íƒœê·¸ì²˜ëŸ¼ ì‚¬ìš©í•  ìˆ˜ ìžˆë‹¤.
 1. setState
- this.setState·Î state °´Ã¼ÀÇ °ªµéÀ» º¯°æÇÑ´Ù.
- this.setState°¡ È£ÃâµÇ¾î¾ß ÄÄÆ÷³ÍÆ®°¡ ´Ù½Ã ·»´õ¸µµÈ´Ù
- ´Ü, °´Ã¼ ¾ÈÀÇ °´Ã¼±îÁö´Â Á¢±ÙÇÒ ¼ö ¾ø¾î¼­ state°´Ã¼ÀÇ ¹Ù²ÙÁö ¾Ê¾Æµµ µÇ´Â ºÎºÐµµ ´Ù ÀÛ¼ºÇØ¼­, state°´Ã¼¸¦ "ÀçÀÛ¼º" ÇØ¾ßÇÑ´Ù.
-2. ÀÌº¥Æ®
- JS¶û ´Ù¸£°Ô Ä«¸áÇ¥±â¹ýÀ» µû¸¥´Ù
+ this.setStateë¡œ state ê°ì²´ì˜ ê°’ë“¤ì„ ë³€ê²½í•œë‹¤.
+ this.setStateê°€ í˜¸ì¶œë˜ì–´ì•¼ ì»´í¬ë„ŒíŠ¸ê°€ ë‹¤ì‹œ ë Œë”ë§ëœë‹¤
+ ë‹¨, ê°ì²´ ì•ˆì˜ ê°ì²´ê¹Œì§€ëŠ” ì ‘ê·¼í•  ìˆ˜ ì—†ì–´ì„œ stateê°ì²´ì˜ ë°”ê¾¸ì§€ ì•Šì•„ë„ ë˜ëŠ” ë¶€ë¶„ë„ ë‹¤ ìž‘ì„±í•´ì„œ, stateê°ì²´ë¥¼ "ìž¬ìž‘ì„±" í•´ì•¼í•œë‹¤.
+2. ì´ë²¤íŠ¸
+ JSëž‘ ë‹¤ë¥´ê²Œ ì¹´ë©œí‘œê¸°ë²•ì„ ë”°ë¥¸ë‹¤
 3. LifeCycle API
-ÄÄÆ÷³ÍÆ®°¡ ºê¶ó¿ìÀú¿¡ ³ªÅ¸³ª¼­ »ç¶óÁö´Â °úÁ¤ ±îÁö¿¡¼­ ¸®¾×Æ®¿¡¼­ ÀÚÃ¼ÀûÀ¸·Î È£ÃâµÇ´Â APIµéÀ» ¸»ÇÑ´Ù.
-4. ¸Þ¼Òµå
- ¸Þ¼Òµå »ý¼º½Ã handle(){ this.setState({})¸¦ ¾²°ÔµÇ¸é ³ªÁß¿¡ ÀÌº¥Æ®°¡ ¹ß»ýÇßÀ»¶§ ÀÌº¥Æ®°¡ ÇÔ¼ö·Î Àü´ÞµÇ´Â °úÁ¤¿¡¼­ "this"°¡ ²÷°Ü this°¡ undefined°¡ µÈ´Ù.
- È­»ìÇ¥ ÇÔ¼ö ÇüÅÂ·Î ÀÛ¼ºÇØ¼­ ÇØ°áÇÑ´Ù. handle = () => {this.setState({})}
+ì»´í¬ë„ŒíŠ¸ê°€ ë¸Œë¼ìš°ì €ì— ë‚˜íƒ€ë‚˜ì„œ ì‚¬ë¼ì§€ëŠ” ê³¼ì • ê¹Œì§€ì—ì„œ ë¦¬ì•¡íŠ¸ì—ì„œ ìžì²´ì ìœ¼ë¡œ í˜¸ì¶œë˜ëŠ” APIë“¤ì„ ë§í•œë‹¤.
+4. ë©”ì†Œë“œ
+ ë©”ì†Œë“œ ìƒì„±ì‹œ handle(){ this.setState({})ë¥¼ ì“°ê²Œë˜ë©´ ë‚˜ì¤‘ì— ì´ë²¤íŠ¸ê°€ ë°œìƒí–ˆì„ë•Œ ì´ë²¤íŠ¸ê°€ í•¨ìˆ˜ë¡œ ì „ë‹¬ë˜ëŠ” ê³¼ì •ì—ì„œ "this"ê°€ ëŠê²¨ thisê°€ undefinedê°€ ëœë‹¤.
+ í™”ì‚´í‘œ í•¨ìˆ˜ í˜•íƒœë¡œ ìž‘ì„±í•´ì„œ í•´ê²°í•œë‹¤. handle = () => {this.setState({})}
 
-[½ÇÁ¦ ÄÚµù]
+[ì‹¤ì œ ì½”ë”©]
 form, input, event : https://velopert.com/3634
-onCreate: ¹öÆ°ÀÌ Å¬¸¯ µÉ ¶§ ½ÇÇà µÉ ÇÔ¼ö
-onChange: ÀÎÇ² ³»¿ëÀÌ º¯°æ µÉ ¶§ ½ÇÇàµÇ´Â ÇÔ¼ö
-onSubmit: Á¦Ãâ ÇÔ¼ö
-ÄÚµå ÇØ¼³ : app.js¿¡¼­ PhoneForm.js¸¦ importÇÑ´Ù. µÎ js°¡ °¢°¢ render()°¡ ÀÌ·ç¾îÁö°í, »ç¿ëÀÚ°¡ input¿¡ µ¥ÀÌÅÍ¸¦ ÀÔ·ÂÇÏ¸é onChange¿¡¼­ °¨ÁöÇÏ¿© handleChange¸¦ È£ÃâÇÑ´Ù.
-              handleChange¿¡´Â this.setState°¡ ÀÖÀ¸¹Ç·Î state¸¦ °»½ÅÇÏ´Âµ¥ jsÀÇ ÀÌº¥Æ® Å¸°Ù(e.target.~)ÀÇ value¸¦ state¿¡ ³Ö°ÔµÈ´Ù. []´Â Å°°ªÀÇ ÇüÅÂ·Î º¯¼ö¸¦ ¾²°Ú´Ù´Â ¶æÀÌµÈ´Ù.
-	  ±×´ÙÀ½ submit ¹öÆ°À» ´©¸£¸é onSubmit¿¡ ¤·ÀÇÇØ handleSubmitÀÌ ½ÇÇàµÇ°í, e.preventDefault()·Î ÆäÀÌÁö °»½ÅÀ¸·Î ÀÎÇÑ µ¥ÀÌÅÍ ¼Õ½ÇÀ» ¸·´Â´Ù.
-	  ±×´ã props¸¦ ºÎ¸ð·Î Àü´ÞÇØ¾ßÇÏ´Âµ¥, this.props.onCreate(this.state)¸¦ º¸¸é ÇöÀç stateµéÀ» onCreate¸¦ ÅëÇØ ºÎ¸ð·Î º¸³½´Ù.
-	  ½ÇÁ¦·Î app.js¿¡ º¸¸é onCreate°¡ ÀÖ°í, ¿©±â¼­ {this.handleCreate}¸¦ È£ÃâÇØ¼­ ³Ñ°Ü¹ÞÀº state¸¦ console.log·Î Ãâ·ÂÇÏ°Ô µÈ´Ù.
+onCreate: ë²„íŠ¼ì´ í´ë¦­ ë  ë•Œ ì‹¤í–‰ ë  í•¨ìˆ˜
+onChange: ì¸í’‹ ë‚´ìš©ì´ ë³€ê²½ ë  ë•Œ ì‹¤í–‰ë˜ëŠ” í•¨ìˆ˜
+onSubmit: ì œì¶œ í•¨ìˆ˜
+ì½”ë“œ í•´ì„¤ : app.jsì—ì„œ PhoneForm.jsë¥¼ importí•œë‹¤. ë‘ jsê°€ ê°ê° render()ê°€ ì´ë£¨ì–´ì§€ê³ , ì‚¬ìš©ìžê°€ inputì— ë°ì´í„°ë¥¼ ìž…ë ¥í•˜ë©´ onChangeì—ì„œ ê°ì§€í•˜ì—¬ handleChangeë¥¼ í˜¸ì¶œí•œë‹¤.
+              handleChangeì—ëŠ” this.setStateê°€ ìžˆìœ¼ë¯€ë¡œ stateë¥¼ ê°±ì‹ í•˜ëŠ”ë° jsì˜ ì´ë²¤íŠ¸ íƒ€ê²Ÿ(e.target.~)ì˜ valueë¥¼ stateì— ë„£ê²Œëœë‹¤. []ëŠ” í‚¤ê°’ì˜ í˜•íƒœë¡œ ë³€ìˆ˜ë¥¼ ì“°ê² ë‹¤ëŠ” ëœ»ì´ëœë‹¤.
+	  ê·¸ë‹¤ìŒ submit ë²„íŠ¼ì„ ëˆ„ë¥´ë©´ onSubmitì— ã…‡ì˜í•´ handleSubmitì´ ì‹¤í–‰ë˜ê³ , e.preventDefault()ë¡œ íŽ˜ì´ì§€ ê°±ì‹ ìœ¼ë¡œ ì¸í•œ ë°ì´í„° ì†ì‹¤ì„ ë§‰ëŠ”ë‹¤.
+	  ê·¸ë‹´ propsë¥¼ ë¶€ëª¨ë¡œ ì „ë‹¬í•´ì•¼í•˜ëŠ”ë°, this.props.onCreate(this.state)ë¥¼ ë³´ë©´ í˜„ìž¬ stateë“¤ì„ onCreateë¥¼ í†µí•´ ë¶€ëª¨ë¡œ ë³´ë‚¸ë‹¤.
+	  ì‹¤ì œë¡œ app.jsì— ë³´ë©´ onCreateê°€ ìžˆê³ , ì—¬ê¸°ì„œ {this.handleCreate}ë¥¼ í˜¸ì¶œí•´ì„œ ë„˜ê²¨ë°›ì€ stateë¥¼ console.logë¡œ ì¶œë ¥í•˜ê²Œ ëœë‹¤.
 
-[¹è¿­]
--ºÒº¯¼º À¯Áö : state ³»ºÎÀÇ °ªÀ» Á÷Á¢ ¼öÁ¤ÇÏ¸é ¾ÈµÈ´Ù. why ? ¼º´É ÃÖÀûÈ­ ¶§¹®.
- µû¶ó¼­ ¹è¿­Àº ±âÁ¸ÀÇ push,pop,splice(start, »èÁ¦ÇÒ°¹¼ö n, »õ·Î¿î»ðÀÔ n°³),unshift(¹è¿­¸Ç¾Õ¿¡»ðÀÔ) ´ë½Å¿¡ concat, slice, map, filter ÇÔ¼ö¸¦ ½á¾ßÇÑ´Ù.
--¹è¿­ »ý¼º
- arr.forEach(function(){}) arr¹è¿­ÀÇ '°¢ ¿ø¼Ò¿¡' functionÀ» ½ÇÇà½ÃÅ²´Ù.
- arr.forEach(ÀÎÀÚ => arr2.push(ÀÎÀÚ)) //¹è¿­ º¹»ç
+[ë°°ì—´]
+-ë¶ˆë³€ì„± ìœ ì§€ : state ë‚´ë¶€ì˜ ê°’ì„ ì§ì ‘ ìˆ˜ì •í•˜ë©´ ì•ˆëœë‹¤. why ? ì„±ëŠ¥ ìµœì í™” ë•Œë¬¸.
+ ë”°ë¼ì„œ ë°°ì—´ì€ ê¸°ì¡´ì˜ push,pop,splice(start, ì‚­ì œí• ê°¯ìˆ˜ n, ìƒˆë¡œìš´ì‚½ìž… nê°œ),unshift(ë°°ì—´ë§¨ì•žì—ì‚½ìž…) ëŒ€ì‹ ì— concat, slice, map, filter í•¨ìˆ˜ë¥¼ ì¨ì•¼í•œë‹¤.
+-ë°°ì—´ ìƒì„±
+ arr.forEach(function(){}) arrë°°ì—´ì˜ 'ê° ì›ì†Œì—' functionì„ ì‹¤í–‰ì‹œí‚¨ë‹¤.
+ arr.forEach(ì¸ìž => arr2.push(ì¸ìž)) //ë°°ì—´ ë³µì‚¬
  arr2 = arr.map(number => number * 2);
- *mapÀ» »ç¿ëÇÏ±â
-  arr.map(function(){}) ¸Þ¼Òµå´Â, ÇØ´ç ¹è¿­ÀÇ °¢ ¿ø¼Ò¿¡ ´ëÇØ ÇÔ¼ö¸¦ ½ÇÇàÇÑ ÈÄ ¹è¿­À» ¹ÝÈ¯ÇÑ´Ù.		
--¹è¿­Àº ÄÄÆ÷³ÍÆ® ¿©·¯°³¸¦ ·»´õ¸µ ÇÒ ¶§ ¾´´Ù.
- ¹è¿­À» ¸¸µé¶§´Â key°ªÀÌ ÇÊ¿äÇÑµ¥ ÀÏ¹ÝÀû ¹æ½ÄÀ¸·Î ¹è¿­ ÀÎµ¦½º¸¦ key·Î ¾²¸é, Áß°£¿¡ µ¥ÀÌÅÍ¸¦ »ðÀÔÇÒ¶§ µÚ µ¥ÀÌÅÍ¸¦ ´Ù ¹Ð¾îÁà¾ßÇÑ´Ù.
- ÇÏÁö¸¸ key°ªÀ» ¹Ì¸® id º¯¼ö¸¦ ¸¸µé¾î ++¹æ½ÄÀ¸·Î props·Î ³Ñ±â¸é °íÀ¯ÀÇ °ªÀÌ »ý°Ü 1,2,3,4Áß°£¿¡ µ¥ÀÌÅÍ¸¦ ³Ö¾îµµ 1,2,5,3,4 Ã³·³ key°ªÀº Á¤·ÄÀÌ ¾Æ´Ï¾îµµ µ¥ÀÌÅÍ »ðÀÔÀÌ µÈ´Ù.
- *defaultProps : µ¥ÀÌÅÍ¸¦ props·Î ³Ñ°Ü¾ßÇÏ´Âµ¥ °ªÀÌ ¾øÀ¸¸é ±úÁö´Â Çö»óÀÌ ¹ß»ýÇÒ ¼ö ÀÖÀ¸¹Ç·Î ±âº»ÀûÀÎ µ¥ÀÌÅÍ¸¦ ³Ö¾îÁØ´Ù.
--¹è¿­ »èÁ¦
- arr.slice(0,2).concat(arr.sclice(3,5)) //0,1À» ÀÚ¸¥´ÙÀ½, 3,4¸¦ ÀÚ¸¥°Í°ú ºÙÀÎ´Ù. arr[2] Á¦°Å
- *filter¸¦ »ç¿ëÇÏ±â
- arr.filter(num => num != 2); //ÀÎÀÚ°ªÀÌ 2ÀÎ ¿ø¼Ò ¹è¿­À» ¹ÝÈ¯ÇÑ´Ù.
--¹è¿­ ¼öÁ¤
- *Àü°³¿¬»êÀÚ '...'
- ...arr Àº '³ª¸ÓÁö ¸Å°³º¯¼ö'¸¦ ¶æÇÑ´Ù. function(arr[0], arr[1], ...arr){} ÀÌ¶ó°í ÇÏ¸é arrÀÇ 0,1¹øÀº ¸Å°³º¯¼ö·Î ¼öµ¿ ¸ÅÇÎµÇ°í ³ª¸ÓÁö µéÀº ÀÚµ¿À¸·Î ¸ÅÇÎµÈ´Ù.
- ´ç¿¬È÷ function(...arr) ·Î »ç¿ëÇÏ¸é ¹è¿­ÀÇ ¸ðµç ¿ø¼Ò°¡ ¸ÅÇÎµÈ´Ù.
- [...arr, 5, 6] ÀÌ¶óÇÏ¸é 1,2,3,4 °¡ ÀÚµ¿À¸·Î ¸ÅÇÎµÈ´Ù.
- *componentDidUpdate(prevProps, prevState){ ¼öÁ¤ ·ÎÁ÷ }
-  ÀÌÀü¿¡ ¹è¿î ¸®¾×Æ®ÀÇ Lifecycle API¿¡ º¸¸é, ·»´õ¸µÀÌ ³¡³­ Á÷ÈÄ¿¡ ÀúÀý·Î È£ÃâµÇ´Â ÇÔ¼öÀÌ´Ù.
+ *mapì„ ì‚¬ìš©í•˜ê¸°
+  arr.map(function(){}) ë©”ì†Œë“œëŠ”, í•´ë‹¹ ë°°ì—´ì˜ ê° ì›ì†Œì— ëŒ€í•´ í•¨ìˆ˜ë¥¼ ì‹¤í–‰í•œ í›„ ë°°ì—´ì„ ë°˜í™˜í•œë‹¤.		
+-ë°°ì—´ì€ ì»´í¬ë„ŒíŠ¸ ì—¬ëŸ¬ê°œë¥¼ ë Œë”ë§ í•  ë•Œ ì“´ë‹¤.
+ ë°°ì—´ì„ ë§Œë“¤ë•ŒëŠ” keyê°’ì´ í•„ìš”í•œë° ì¼ë°˜ì  ë°©ì‹ìœ¼ë¡œ ë°°ì—´ ì¸ë±ìŠ¤ë¥¼ keyë¡œ ì“°ë©´, ì¤‘ê°„ì— ë°ì´í„°ë¥¼ ì‚½ìž…í• ë•Œ ë’¤ ë°ì´í„°ë¥¼ ë‹¤ ë°€ì–´ì¤˜ì•¼í•œë‹¤.
+ í•˜ì§€ë§Œ keyê°’ì„ ë¯¸ë¦¬ id ë³€ìˆ˜ë¥¼ ë§Œë“¤ì–´ ++ë°©ì‹ìœ¼ë¡œ propsë¡œ ë„˜ê¸°ë©´ ê³ ìœ ì˜ ê°’ì´ ìƒê²¨ 1,2,3,4ì¤‘ê°„ì— ë°ì´í„°ë¥¼ ë„£ì–´ë„ 1,2,5,3,4 ì²˜ëŸ¼ keyê°’ì€ ì •ë ¬ì´ ì•„ë‹ˆì–´ë„ ë°ì´í„° ì‚½ìž…ì´ ëœë‹¤.
+ *defaultProps : ë°ì´í„°ë¥¼ propsë¡œ ë„˜ê²¨ì•¼í•˜ëŠ”ë° ê°’ì´ ì—†ìœ¼ë©´ ê¹¨ì§€ëŠ” í˜„ìƒì´ ë°œìƒí•  ìˆ˜ ìžˆìœ¼ë¯€ë¡œ ê¸°ë³¸ì ì¸ ë°ì´í„°ë¥¼ ë„£ì–´ì¤€ë‹¤.
+-ë°°ì—´ ì‚­ì œ
+ arr.slice(0,2).concat(arr.sclice(3,5)) //0,1ì„ ìžë¥¸ë‹¤ìŒ, 3,4ë¥¼ ìžë¥¸ê²ƒê³¼ ë¶™ì¸ë‹¤. arr[2] ì œê±°
+ *filterë¥¼ ì‚¬ìš©í•˜ê¸°
+ arr.filter(num => num != 2); //ì¸ìžê°’ì´ 2ì¸ ì›ì†Œ ë°°ì—´ì„ ë°˜í™˜í•œë‹¤.
+-ë°°ì—´ ìˆ˜ì •
+ *ì „ê°œì—°ì‚°ìž '...'
+ ...arr ì€ 'ë‚˜ë¨¸ì§€ ë§¤ê°œë³€ìˆ˜'ë¥¼ ëœ»í•œë‹¤. function(arr[0], arr[1], ...arr){} ì´ë¼ê³  í•˜ë©´ arrì˜ 0,1ë²ˆì€ ë§¤ê°œë³€ìˆ˜ë¡œ ìˆ˜ë™ ë§¤í•‘ë˜ê³  ë‚˜ë¨¸ì§€ ë“¤ì€ ìžë™ìœ¼ë¡œ ë§¤í•‘ëœë‹¤.
+ ë‹¹ì—°ížˆ function(...arr) ë¡œ ì‚¬ìš©í•˜ë©´ ë°°ì—´ì˜ ëª¨ë“  ì›ì†Œê°€ ë§¤í•‘ëœë‹¤.
+ [...arr, 5, 6] ì´ë¼í•˜ë©´ 1,2,3,4 ê°€ ìžë™ìœ¼ë¡œ ë§¤í•‘ëœë‹¤.
+ *componentDidUpdate(prevProps, prevState){ ìˆ˜ì • ë¡œì§ }
+  ì´ì „ì— ë°°ìš´ ë¦¬ì•¡íŠ¸ì˜ Lifecycle APIì— ë³´ë©´, ë Œë”ë§ì´ ëë‚œ ì§í›„ì— ì €ì ˆë¡œ í˜¸ì¶œë˜ëŠ” í•¨ìˆ˜ì´ë‹¤.
 
-[¶óÀÌÇÁ»çÀÌÅ¬ api]
-ÄÄÆ÷³ÍÆ® »ý¼º-> ¿Ï·á
-prop º¯È­ -> ¾÷µ¥ÀÌÆ® Ã³¸® -> ¿Ï·á
-state º¯È­ -> ¡è
-ÄÄÆ÷³ÍÆ® Á¦°Å
-1. ÄÄÆ÷³ÍÆ® »ý¼º
+[ë¼ì´í”„ì‚¬ì´í´ api]
+ì»´í¬ë„ŒíŠ¸ ìƒì„±-> ì™„ë£Œ
+prop ë³€í™” -> ì—…ë°ì´íŠ¸ ì²˜ë¦¬ -> ì™„ë£Œ
+state ë³€í™” -> â†‘
+ì»´í¬ë„ŒíŠ¸ ì œê±°
+1. ì»´í¬ë„ŒíŠ¸ ìƒì„±
 	: constructor-> componentWillMount-> render
-   ¿Ï·á
-	: componentDidMount (·»´õ¸µ ÀÌÈÄ¿¡ ½ÇÇàµÇ´Â ¸Þ¼Òµå´Ï, ÀÌ ¾È¿¡ ´Ù¸¥ JSÇÁ·¹ÀÓ¿öÅ©¸¦ ¿¬µ¿ÇÏ°Å³ª setTimeout, setInterval, Ajax µîÀ» ³Ö´Â´Ù)
-2. prop º¯È­
+   ì™„ë£Œ
+	: componentDidMount (ë Œë”ë§ ì´í›„ì— ì‹¤í–‰ë˜ëŠ” ë©”ì†Œë“œë‹ˆ, ì´ ì•ˆì— ë‹¤ë¥¸ JSí”„ë ˆìž„ì›Œí¬ë¥¼ ì—°ë™í•˜ê±°ë‚˜ setTimeout, setInterval, Ajax ë“±ì„ ë„£ëŠ”ë‹¤)
+2. prop ë³€í™”
 	: componentWillReceiveProps-> shouldComponentUpdate->          componentWillUpdate-> render
-	 (prop º°·Î state¸¦ ¾÷µ¥ÀÌÆ®)    (prop,state º¯°æ½Ã ¸®·»´õ¸µÀ» ÇÒÁö) (·»´õ¸µ Àü¿¡ ½ÇÇà)
-   ¿Ï·á
-	: componentDidUpdate (¸®·»´õ¸µ ÀÌÈÄ¿¡ ½ÇÇà)
-3. state º¯È­
-	: ¹Ù·Î shouldComponentUpdate¸¦ ½ÇÇàÇÔ
-4 ÄÄÆ÷³ÍÆ® Á¦°Å
-	: compoenetWillUnmount (ÄÄÆ÷³ÍÆ®°¡ DOM¿¡¼­ »ç¶óÁø ÈÄ ½ÇÇà)
-*°³¹ßÀÚ ÄÜ¼Ö·Î º¸¸é, ½ÇÁ¦·Î ¸®·£´õ¸µÀÌ ¸Å¿ì ¸¹ÀÌ ÀÏ¾î³². ¼º´É ÃÖÀûÈ­¸¦ À§ÇØ¼­ shouldComponentUpdate·Î ¸®·»´õ¸µµéÀ» ¹æÁöÇØÁÙ ¼ö ÀÖ´Ù.
+	 (prop ë³„ë¡œ stateë¥¼ ì—…ë°ì´íŠ¸)    (prop,state ë³€ê²½ì‹œ ë¦¬ë Œë”ë§ì„ í• ì§€) (ë Œë”ë§ ì „ì— ì‹¤í–‰)
+   ì™„ë£Œ
+	: componentDidUpdate (ë¦¬ë Œë”ë§ ì´í›„ì— ì‹¤í–‰)
+3. state ë³€í™”
+	: ë°”ë¡œ shouldComponentUpdateë¥¼ ì‹¤í–‰í•¨
+4 ì»´í¬ë„ŒíŠ¸ ì œê±°
+	: compoenetWillUnmount (ì»´í¬ë„ŒíŠ¸ê°€ DOMì—ì„œ ì‚¬ë¼ì§„ í›„ ì‹¤í–‰)
+*ê°œë°œìž ì½˜ì†”ë¡œ ë³´ë©´, ì‹¤ì œë¡œ ë¦¬ëžœë”ë§ì´ ë§¤ìš° ë§Žì´ ì¼ì–´ë‚¨. ì„±ëŠ¥ ìµœì í™”ë¥¼ ìœ„í•´ì„œ shouldComponentUpdateë¡œ ë¦¬ë Œë”ë§ë“¤ì„ ë°©ì§€í•´ì¤„ ìˆ˜ ìžˆë‹¤.
 
-[ºñ±¸Á¶È­ ÇÒ´ç]
-¹è¿­ÀÌ³ª °´Ã¼ÀÇ ¼Ó¼ºÀ» ÇØÃ¼ÇÏ¿© º¯¼ö¿¡ ´ã´Â Ç¥Çö½ÄÀÌ´Ù.
-¹è¿­ÀÎ °æ¿ì let [a,b] = [10,20]; È¤Àº let [a, ...rest] = [1,2,3,4,5] Ã³·³ ¾´´Ù.
-°´Ã¼¸¦ ´ãÀ»¶§´Â test{x:1, b:1} ÀÌ¸é let {x,y} = test; Ã³·³ »ç¿ë °¡´ÉÇÏ´Ù.
-¶ÇÇÑ, ÄÄÆ÷³ÍÆ®¸¦ Àü´ÞÇÏ´Âµ¥ ¾µ ¼öµµ ÀÖ´Ù.
- (props) => {...} ·Î propÀ» ³Ñ±â´ø ¹æ½Ä¿¡¼­, ÇÔ¼öÇü ÄÄÆ÷³ÍÆ®¸¦ ¸¸µé¾î props´ë½Å ÄÄÆ÷³ÍÆ®¸¦ Àü´ÞÇÒ ¼ö ÀÖ´Ù.
+[ë¹„êµ¬ì¡°í™” í• ë‹¹]
+ë°°ì—´ì´ë‚˜ ê°ì²´ì˜ ì†ì„±ì„ í•´ì²´í•˜ì—¬ ë³€ìˆ˜ì— ë‹´ëŠ” í‘œí˜„ì‹ì´ë‹¤.
+ë°°ì—´ì¸ ê²½ìš° let [a,b] = [10,20]; í˜¹ì€ let [a, ...rest] = [1,2,3,4,5] ì²˜ëŸ¼ ì“´ë‹¤.
+ê°ì²´ë¥¼ ë‹´ì„ë•ŒëŠ” test{x:1, b:1} ì´ë©´ let {x,y} = test; ì²˜ëŸ¼ ì‚¬ìš© ê°€ëŠ¥í•˜ë‹¤.
+ë˜í•œ, ì»´í¬ë„ŒíŠ¸ë¥¼ ì „ë‹¬í•˜ëŠ”ë° ì“¸ ìˆ˜ë„ ìžˆë‹¤.
+ (props) => {...} ë¡œ propì„ ë„˜ê¸°ë˜ ë°©ì‹ì—ì„œ, í•¨ìˆ˜í˜• ì»´í¬ë„ŒíŠ¸ë¥¼ ë§Œë“¤ì–´ propsëŒ€ì‹  ì»´í¬ë„ŒíŠ¸ë¥¼ ì „ë‹¬í•  ìˆ˜ ìžˆë‹¤.
  const Temp = ({form, child}) => { return ( ...... <div> {form} </div><div> {child} </div>) };
- ÇÑ¹ø¿¡ ·»´õÆÃÇØ¼­ <div><form/><child/></div>ÇØµµ µÇÁö¸¸ Å©±â°¡ Ä¿Á³À»¶§ ºÒ¸®ÇÏ´Ù.
- *ÇÔ¼öÇü ÄÄÆ÷³ÍÆ®¿¡¼­´Â state¸¦ ¾µ ¼ö ¾ø°í, lifecycleÀÌ ¾ø±â ¶§¹®¿¡ ¸¶¿îÆ®°¡ ¸Å¿ìÁ¶±Ý ºü¸£´Ù. 
-  µû¶ó¼­ ¹Ýº¹À» ¸·±âÀ§ÇØ api¸¦ ½á¾ßÇÏ´Â °æ¿ì(List³ª µ¿ÀûÀ¸·Î ·»´õ¸µ µÇ´Â ºÎºÐ)´Â Å¬·¡½º ÄÄÆ÷³ÍÆ®·Î ¸¸µé¾î¾ßÇÑ´Ù.
-  Å¬·¡½º ÄÄÆ÷³ÍÆ®´Â class A extends Component{} ÇüÅÂÀÌ±â ¶§¹®¿¡ ¶óÀÌÇÁ»çÀÌÅ¬ api¸¦ ÅëÇØ ÃÖÀûÈ­(¸®·£´õ¸µ ¹æÁö)¸¦ ÇÒ ¼ö ÀÖ´Ù.
+ í•œë²ˆì— ë Œë”íŒ…í•´ì„œ <div><form/><child/></div>í•´ë„ ë˜ì§€ë§Œ í¬ê¸°ê°€ ì»¤ì¡Œì„ë•Œ ë¶ˆë¦¬í•˜ë‹¤.
+ *í•¨ìˆ˜í˜• ì»´í¬ë„ŒíŠ¸ì—ì„œëŠ” stateë¥¼ ì“¸ ìˆ˜ ì—†ê³ , lifecycleì´ ì—†ê¸° ë•Œë¬¸ì— ë§ˆìš´íŠ¸ê°€ ë§¤ìš°ì¡°ê¸ˆ ë¹ ë¥´ë‹¤. 
+  ë”°ë¼ì„œ ë°˜ë³µì„ ë§‰ê¸°ìœ„í•´ apië¥¼ ì¨ì•¼í•˜ëŠ” ê²½ìš°(Listë‚˜ ë™ì ìœ¼ë¡œ ë Œë”ë§ ë˜ëŠ” ë¶€ë¶„)ëŠ” í´ëž˜ìŠ¤ ì»´í¬ë„ŒíŠ¸ë¡œ ë§Œë“¤ì–´ì•¼í•œë‹¤.
+  í´ëž˜ìŠ¤ ì»´í¬ë„ŒíŠ¸ëŠ” class A extends Component{} í˜•íƒœì´ê¸° ë•Œë¬¸ì— ë¼ì´í”„ì‚¬ì´í´ apië¥¼ í†µí•´ ìµœì í™”(ë¦¬ëžœë”ë§ ë°©ì§€)ë¥¼ í•  ìˆ˜ ìžˆë‹¤.
   todos.map(
       (todo) => (
         <TodoItem
@@ -123,7 +131,7 @@ state º¯È­ -> ¡è
         />
       )
   );
-  ÀÌ·¸°Ô ½á¾ßÇÒ ³»¿ëÀ», ºñ±¸Á¶È­¸¦ ÅëÇØ °´Ã¼ ³»ºÎ°ª¿¡ µû·Î ·¹ÆÛ·±½º¸¦ ¸¸µé¾îÁÙ ¼ö ÀÖ´Ù.
+  ì´ë ‡ê²Œ ì¨ì•¼í•  ë‚´ìš©ì„, ë¹„êµ¬ì¡°í™”ë¥¼ í†µí•´ ê°ì²´ ë‚´ë¶€ê°’ì— ë”°ë¡œ ë ˆí¼ëŸ°ìŠ¤ë¥¼ ë§Œë“¤ì–´ì¤„ ìˆ˜ ìžˆë‹¤.
   const todoList = todos.map(
       ({id, text, checked}) => (
         <TodoItem
@@ -134,28 +142,28 @@ state º¯È­ -> ¡è
       )
   );
 
-[½ºÅ¸ÀÏ¸µ]
-¸®¾×Æ®¿¡¼­´Â class´ë½Å classNameÀ» ¾´´Ù.
-¸®¾×Æ®¿¡¼­´Â css¸¦ °´Ã¼ÇüÅÂ·Î ÀÛ¼ºÇØÁØ´Ù.
-css Å¬·¡½º¸í µ¿ÀûÀ¸·Î ¹Ù²Ù±â : <div className={'test ${checked ? ' checked' : ''}'}> => ¸¸¾à º¯¼ö checked°¡ true¸é className=test checked ÀÌ°í, false¸é className=test °¡ µÈ´Ù.
-e.stopPropagation() : ¹ø½ÄÀ» ¸ØÃá´Ù´Â ¶æÀ¸·Î, div¾ÈÀÇ div¿¡¼­ onclickÇÒ¶§ ºÎ¸ð divÀÇ onclickÀÌ µÇÁö ÀÛµ¿µÇÁö ¾Ê°Ô ÇÑ´Ù.
-arr.findIndex(function(){}) : ÇÔ¼ö¾ÈÀÇ Á¶°ÇÀ» ¸¸Á·ÇÏ´Â arrÀÇ Ã¹ ¹øÂ° ÀÎµ¦½º¸¦ ¹ÝÈ¯ÇÑ´Ù.
+[ìŠ¤íƒ€ì¼ë§]
+ë¦¬ì•¡íŠ¸ì—ì„œëŠ” classëŒ€ì‹  classNameì„ ì“´ë‹¤.
+ë¦¬ì•¡íŠ¸ì—ì„œëŠ” cssë¥¼ ê°ì²´í˜•íƒœë¡œ ìž‘ì„±í•´ì¤€ë‹¤.
+css í´ëž˜ìŠ¤ëª… ë™ì ìœ¼ë¡œ ë°”ê¾¸ê¸° : <div className={'test ${checked ? ' checked' : ''}'}> => ë§Œì•½ ë³€ìˆ˜ checkedê°€ trueë©´ className=test checked ì´ê³ , falseë©´ className=test ê°€ ëœë‹¤.
+e.stopPropagation() : ë²ˆì‹ì„ ë©ˆì¶˜ë‹¤ëŠ” ëœ»ìœ¼ë¡œ, divì•ˆì˜ divì—ì„œ onclickí• ë•Œ ë¶€ëª¨ divì˜ onclickì´ ë˜ì§€ ìž‘ë™ë˜ì§€ ì•Šê²Œ í•œë‹¤.
+arr.findIndex(function(){}) : í•¨ìˆ˜ì•ˆì˜ ì¡°ê±´ì„ ë§Œì¡±í•˜ëŠ” arrì˜ ì²« ë²ˆì§¸ ì¸ë±ìŠ¤ë¥¼ ë°˜í™˜í•œë‹¤.
 
-[¸®´ö½º]
-ÄÄÆ÷³ÍÆ®µéÀÇ state¸¦ ºÎ¸ð¸¦ °ÅÄ¡Áö ¾Ê°í, ¿ÜºÎ¿¡¼­ ÇÑ´Ù. 
-À¯Áöº¸¼ö¿¡ È¿À²ÀÌ ¿À¸¥´Ù. depth 10ÀÇ ÄÄÆ÷³ÍÆ®ÀÇ ¾÷µ¥ÀÌÆ®°¡ »ý±â¸é ºÎ¸ð,ºÎ¸ð,ºÎ¸ð ... Root¸¦ °ÅÃÄ¾ß ÇÑ´Ù. ¸®´ö½º¸¦ ¾²¸é 1 depth¸¸À¸·Îµµ ¾÷µ¥ÀÌÆ®°¡ °¡´ÉÇÏ´Ù.
-#¿øÄ¢ : 1 app 1 store, ÀÐ±âÀü¿ë(±âÁ¸ÀÇ state°ÇµéÁö ¾Ê°í »õ·Î¿î state¸¦ »ý¼ºÇØ¼­ ¾÷µ¥ÀÌÆ®), ¸®µà¼­´Â ¼ø¼öÇÔ¼ö(°°Àº ÀÔ·Â¿¡ °°Àº °á°ú¸¦ ¹ÝÈ¯ÇÑ´Ù - random X, new date X)
+[ë¦¬ë•ìŠ¤]
+ì»´í¬ë„ŒíŠ¸ë“¤ì˜ stateë¥¼ ë¶€ëª¨ë¥¼ ê±°ì¹˜ì§€ ì•Šê³ , ì™¸ë¶€ì—ì„œ í•œë‹¤. 
+ìœ ì§€ë³´ìˆ˜ì— íš¨ìœ¨ì´ ì˜¤ë¥¸ë‹¤. depth 10ì˜ ì»´í¬ë„ŒíŠ¸ì˜ ì—…ë°ì´íŠ¸ê°€ ìƒê¸°ë©´ ë¶€ëª¨,ë¶€ëª¨,ë¶€ëª¨ ... Rootë¥¼ ê±°ì³ì•¼ í•œë‹¤. ë¦¬ë•ìŠ¤ë¥¼ ì“°ë©´ 1 depthë§Œìœ¼ë¡œë„ ì—…ë°ì´íŠ¸ê°€ ê°€ëŠ¥í•˜ë‹¤.
+#ì›ì¹™ : 1 app 1 store, ì½ê¸°ì „ìš©(ê¸°ì¡´ì˜ stateê±´ë“¤ì§€ ì•Šê³  ìƒˆë¡œìš´ stateë¥¼ ìƒì„±í•´ì„œ ì—…ë°ì´íŠ¸), ë¦¬ë“€ì„œëŠ” ìˆœìˆ˜í•¨ìˆ˜(ê°™ì€ ìž…ë ¥ì— ê°™ì€ ê²°ê³¼ë¥¼ ë°˜í™˜í•œë‹¤ - random X, new date X)
 
-#¿ø¸® : Redux Store»ý¼º-> AÄÄÆ÷³ÍÆ®°¡ Store¸¦ ±¸µ¶(subscribe())-> BÄÄÆ÷³ÍÆ®¿¡¼­ ¾÷µ¥ÀÌÆ® ¹ß»ý(dispatch())-> actionÀ» StoreÀÇ '¸®µà¼­'¿¡ ³Ñ±è(¸®µà¼­´Â ¾÷µ¥ÀÌÆ® ·ÎÁ÷À» ¼öÇàÇÏ´Â ÇÔ¼ö)-> ¾÷µ¥ÀÌÆ®¸¦ ±¸µ¶ÀÚ¿¡°Ô ¾Ë¸²(listener())-> ´Ù½Ã ·£´õ¸µ µÊ
-#1. ½ºÅä¾î»ý¼º
+#ì›ë¦¬ : Redux Storeìƒì„±-> Aì»´í¬ë„ŒíŠ¸ê°€ Storeë¥¼ êµ¬ë…(subscribe())-> Bì»´í¬ë„ŒíŠ¸ì—ì„œ ì—…ë°ì´íŠ¸ ë°œìƒ(dispatch())-> actionì„ Storeì˜ 'ë¦¬ë“€ì„œ'ì— ë„˜ê¹€(ë¦¬ë“€ì„œëŠ” ì—…ë°ì´íŠ¸ ë¡œì§ì„ ìˆ˜í–‰í•˜ëŠ” í•¨ìˆ˜)-> ì—…ë°ì´íŠ¸ë¥¼ êµ¬ë…ìžì—ê²Œ ì•Œë¦¼(listener())-> ë‹¤ì‹œ ëžœë”ë§ ë¨
+#1. ìŠ¤í† ì–´ìƒì„±
      const {createStore} = Redux;
-     const store = createStore(¾×¼ÇÀ» ³Ñ°Ü¹Þ´Â ÇÔ¼ö A);
-#2. ½ºÅä¾î ±¸µ¶
+     const store = createStore(ì•¡ì…˜ì„ ë„˜ê²¨ë°›ëŠ” í•¨ìˆ˜ A);
+#2. ìŠ¤í† ì–´ êµ¬ë…
      store.subscribe(render);
-#3. ¾÷µ¥ÀÌÆ®
-     element.addEventListener(... store.dispatch(up)); //up¾×¼ÇÀÌ A·Î °£´Ù.
-     //A³»ºÎ¿¡¼­ ·ÎÁ÷ ¼öÇà ÈÄ return state;
-#4. const render = () => { //¿©±â°¡ listener·Î½á ¾÷µ¥ÀÌÆ®°¡ ¿Ï·áµÇ¸é Àç ·£´õ¸µ µÇ´Â ºÎºÐ}
+#3. ì—…ë°ì´íŠ¸
+     element.addEventListener(... store.dispatch(up)); //upì•¡ì…˜ì´ Aë¡œ ê°„ë‹¤.
+     //Aë‚´ë¶€ì—ì„œ ë¡œì§ ìˆ˜í–‰ í›„ return state;
+#4. const render = () => { //ì—¬ê¸°ê°€ listenerë¡œì¨ ì—…ë°ì´íŠ¸ê°€ ì™„ë£Œë˜ë©´ ìž¬ ëžœë”ë§ ë˜ëŠ” ë¶€ë¶„}
 
 
 
@@ -163,9 +171,9 @@ arr.findIndex(function(){}) : ÇÔ¼ö¾ÈÀÇ Á¶°ÇÀ» ¸¸Á·ÇÏ´Â arrÀÇ Ã¹ ¹øÂ° ÀÎµ¦½º¸¦ ¹Ý
 
 
 
-[½Ç½À]
-html·Î 3°³ È­¸é ¸¸µé±â
-div·Î css ÀÔÈ÷±â
-Á¶°Ç½Ä¾øÀÌ ÀÌ¸§º°·Î ¼ºº° ³ªÅ¸³»±â
+[ì‹¤ìŠµ]
+htmlë¡œ 3ê°œ í™”ë©´ ë§Œë“¤ê¸°
+divë¡œ css ìž…ížˆê¸°
+ì¡°ê±´ì‹ì—†ì´ ì´ë¦„ë³„ë¡œ ì„±ë³„ ë‚˜íƒ€ë‚´ê¸°
 
-ÇöÀç À§Ä¡    https://velopert.com/3634
+í˜„ìž¬ ìœ„ì¹˜    https://velopert.com/3634

@@ -57,7 +57,25 @@ Javascript XML로, 리액트에서 UI 템플릿을 만들때 사용한다.
  메소드 생성시 handle(){ this.setState({})를 쓰게되면 나중에 이벤트가 발생했을때 이벤트가 함수로 전달되는 과정에서 "this"가 끊겨 this가 undefined가 된다.
  화살표 함수 형태로 작성해서 해결한다. handle = () => {this.setState({})}
 
+[컨테이너 컴포넌트]
+리덕스와 연동된 컴포넌트를 컨테이너 컴포넌트라고 한다.
+그냥 단순히 props 를 전달해주면 그대로 보여주는 컴포넌트들은 프리젠테이셔널 컴포넌트라고 한다.
+-react-redux에서 제공하는 connect 함수로 스토어와 컴포넌트를 연결한다.
+-connect(params)(Tag)형태로 사용하며 Tag명이 부모 컴포넌트에서 <Tag>로 사용된다.
+-파마리터 params는 "스토어에서 자식 컴포넌트로 보내는 props"다.
+-정리하면, reducer에서 넘긴 state/action을 store를 통해 컨테이너 컴포넌트로 전달된다.
+
+-바로위 각 파라미터가 선언된함수를가보면 리듀서에 선언된 함수와 state를 각각 인자로 가져와서 현재 컴포넌트의 함수에 넣어준다.
+-현재 컴포넌트의 함수는 맨위에 선언되어있고 얘네는 render에서 호출된다.
+-prop은 app.js에서 컨테이너. 그담 하위로 전달되고 실제액션은 맨 하위에서 보고 따라올라간다.
+
+
 [실제 코딩]
+" => { "는 function(){return}을 뜻한다.
+" x=> ({x.y"는 x.y객체를 return해 x객체라고 한다.
+"const {a} = this.props"은 const a= this.props.a와 같다.
+"const {a,b} = this.props"처럼 여러개도 사용가능하다.
+
 form, input, event : https://velopert.com/3634
 onCreate: 버튼이 클릭 될 때 실행 될 함수
 onChange: 인풋 내용이 변경 될 때 실행되는 함수
@@ -117,6 +135,7 @@ state 변화 -> ↑
 배열이나 객체의 속성을 해체하여 변수에 담는 표현식이다.
 배열인 경우 let [a,b] = [10,20]; 혹은 let [a, ...rest] = [1,2,3,4,5] 처럼 쓴다.
 객체를 담을때는 test{x:1, b:1} 이면 let {x,y} = test; 처럼 사용 가능하다.
+({temp})={var.x.y}해서 temp.y 가능
 또한, 컴포넌트를 전달하는데 쓸 수도 있다.
  (props) => {...} 로 prop을 넘기던 방식에서, 함수형 컴포넌트를 만들어 props대신 컴포넌트를 전달할 수 있다.
  const Temp = ({form, child}) => { return ( ...... <div> {form} </div><div> {child} </div>) };
